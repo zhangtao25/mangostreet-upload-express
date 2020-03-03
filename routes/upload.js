@@ -18,7 +18,7 @@ var upload = multer({
 
 router.post('/', upload.single('file'), function (req, res, next) {
   let file = req.file;
-  res.json(file);
+  res.send(file)
 });
 
 module.exports = router;
